@@ -1,0 +1,81 @@
+---
+title: "Slack Bot Setup"
+description: "How to set up a Slack bot to automatically answer questions"
+icon: "slack"
+---
+
+## How it works
+
+On behalf of the app, OnyxConnector can:
+
+- View messages and other content in public channels that OnyxConnector has been added to
+- View basic information about public channels in a workspace
+- View messages and other content in private channels that OnyxConnector has been added to
+- View basic information about private channels that OnyxConnector has been added to
+- Join public channels in a workspace
+- View messages and other content in direct messages that OnyxConnector has been added to
+- View people in a workspace
+- View email addresses of people in a workspace
+- View user groups in a workspace
+
+## Setting up
+
+### Authorization
+
+1. **Note: You must be an admin of the Slack workspace to set up the connector**
+2. Navigate and sign in to https://api.slack.com/apps.
+3. Create a new Slack app:
+   - Click the **Create New App** button in the middle of the screen.
+   - Select **From an app manifest** option.
+   - Select the relevant workspace from the dropdown and click **Next**.
+
+![images/1.png](/images/1.png)
+
+![images/2.png](/images/2.png)
+
+1. Select the "YAML" tab, paste the following manifest into the text box, and click **Next**:
+
+   ![images/3.png](/images/3.png)
+
+```
+display_information:
+  name: OnyxConnector
+  description: ReadOnly Connector for indexing Onyx
+features:
+  bot_user:
+    display_name: OnyxConnector
+    always_online: false
+oauth_config:
+  scopes:
+    bot:
+      - channels:history
+      - channels:read
+      - groups:history
+      - groups:read
+      - channels:join
+      - im:history
+      - users:read
+      - users:read.email
+      - usergroups:read
+settings:
+  org_deploy_enabled: false
+  socket_mode_enabled: false
+  token_rotation_enabled: false
+```
+
+1. Click the **Create** button.
+2. In the app page, navigate to the **OAuth & Permissions** tab under the **Features** header.
+
+![images/Screenshot2025-03-18131759.png](/images/Screenshot2025-03-18131759.png)
+
+7. Find the block that says **OAuth Tokens **and click**Install to (workspace)** 
+
+![images/4.png](/images/4.png)
+
+9. Verify **OnyxConnector **is in your workspace
+
+![images/Screenshot2025-03-18132701.png](/images/Screenshot2025-03-18132701.png)
+
+10. Revisit the **How it Works** at the top of this page to understand OnyxConnector's authorizations
+
+**Note:** The first indexing pulls all of the public channels and takes longer than future updates.
