@@ -6,25 +6,22 @@ icon: "slack"
 
 ## How it works
 
-On behalf of the app, OnyxConnector can:
+The Onyx Slack Connector allows Onyx to index and make Slack conversations searchable. It enables Onyx to retrieve messages from both public and private Slack channels (only if the bot is manually added to private ones).
 
-- View messages and other content in public channels that OnyxConnector has been added to
-- View basic information about public channels in a workspace
-- View messages and other content in private channels that OnyxConnector has been added to
-- View basic information about private channels that OnyxConnector has been added to
-- Join public channels in a workspace
-- View messages and other content in direct messages that OnyxConnector has been added to
-- View people in a workspace
-- View email addresses of people in a workspace
-- View user groups in a workspace
+Once connected, you can:
+
+Search for Slack messages directly within Onyx.
+Automatically index new messages in selected channels.
+Ensure seamless retrieval of both public and private Slack conversations to enhance knowledge discovery.
 
 ## Setting up
 
 ### Creating an App
 
-1. **Note: You must be an admin of the Slack workspace to set up the connector**
-2. Navigate and sign in to https://api.slack.com/apps.
-3. Create a new Slack app:
+**Note: You must be an admin of the Slack workspace to set up the connector**
+
+1. Navigate and sign in to https://api.slack.com/apps.
+2. Create a new Slack app:
    - Click the **Create New App** button on the top right.
    - Select **From an app manifest** option.
    - Select the relevant workspace from the dropdown and click **Next**.
@@ -34,8 +31,6 @@ On behalf of the app, OnyxConnector can:
 ### Manifest
 
 1. Select the "YAML" tab, paste the following manifest into the text box, and click **Next**:
-![images/3.png](/images/3.png)
-
 ```
 display_information:
   name: OnyxConnector
@@ -100,7 +95,6 @@ settings:
 
 ![images/Screenshot2025-03-18140958.png](/images/Screenshot2025-03-18140958.png)
 
-![images/Screenshot2025-03-18141011.png](/images/Screenshot2025-03-18141011.png)
 
 6. Verify that the connector has **successfully synced**
 
@@ -108,9 +102,8 @@ settings:
 
 ## Troubleshooting
 
-If you need to **reindex**, **pause**, **update the credentials**, **configuration**, or **frequencies **of the connector, click on the existing connector and see the following options
+If you need to **reindex**, **pause**, **update the credentials**, **configuration**, or update the **frequencies** of the connector, click on the existing connector and see the following options
 
-![images/Screenshot2025-03-18142641.png](/images/Screenshot2025-03-18142641.png)
 
 Revisit the **How it Works** at the top of this page to understand OnyxConnector's authorizations
 
