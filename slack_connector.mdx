@@ -23,12 +23,13 @@ Ensure seamless retrieval of both public and private Slack conversations to enha
 1. Navigate and sign in to https://api.slack.com/apps.
 2. Create a new Slack app:
    - Click the **Create New App** button on the top right.
-   - Select **From an app manifest** option.
+   - Select the **From a manifest** option.
    - Select the relevant workspace from the dropdown and click **Next**.
 
-### ![images/Screenshot2025-03-18135430.png](/images/Screenshot2025-03-18135430.png)
+### ![images/Screenshot2025-03-18135430.png](/Create&Manifest.png)
 
-3. Select the "YAML" tab, paste the following manifest into the text box, and click **Next**, then **Create**:
+1. Select the "YAML" tab, paste the following manifest into the text box, and click **Next**, then **Create**:
+
 ```
 display_information:
   name: OnyxConnector
@@ -57,49 +58,41 @@ settings:
 
 ### OAuth & Permissions
 
-1. In the app page, navigate to the **OAuth & Permissions** tab under the **Features** header.
-
-![images/Screenshot2025-03-18131759.png](/images/Screenshot2025-03-18131759.png)
-
+1. Once the app has been created, navigate to the **OAuth & Permissions** tab under the **Features** header.
 2. Find the block that says **OAuth Tokens and click Install to (workspace)**
-
-![images/4.png](/images/4.png)
-
 3. Copy the **Bot User OAuth Token**
 
-### ![images/Screenshot2025-03-18141203.png](/images/Screenshot2025-03-18141203.png)
+   ![images/OAuth&Copy.png](/images/OAuth&Copy.png)
 
 ### Onyx Admin
 
 1. Login to https://www.onyx.app/ and proceed to the **Admin Panel**
 
-![images/Screenshot2025-03-18140618.png](/images/Screenshot2025-03-18140618.png)
+![images/OnyxAdminPanel.png](/images/OnyxAdminPanel.png)
 
-2. Click on **Add Connector** and search for **Slack**
+1. Click on **Add Connector** and search for **Slack**
 
-![images/Screenshot2025-03-18140708.png](/images/Screenshot2025-03-18140708.png)
+![images/AddConnector.png](/images/AddConnector.png)
 
-3. Click on **Create New**
+1. Click on **Create New**
 
-![images/Screenshot2025-03-18140737.png](/images/Screenshot2025-03-18140737.png)
+![images/CreateNew.png](/images/CreateNew.png)
 
-4. Create a name and add **paste your OAuth Token** from **OAuth & Permissions Step 3** then **click Create**
+1. Create a **name **and **paste your OAuth Token** from **OAuth & Permissions Step 3** then **click Create**
 
-![images/Screenshot2025-03-18141832.png](/images/Screenshot2025-03-18141832.png)
+![images/SlackBotTokenAdd.png](/images/SlackBotTokenAdd.png)
 
-5. Configure your connector, then click **Create Connector +**
+1. Configure your connector, then click **Create Connector +**
 
 ![images/Screenshot2025-03-18140958.png](/images/Screenshot2025-03-18140958.png)
 
-
-6. Verify that the connector has **successfully synced**
+1. Verify that the connector has **successfully synced**
 
 ## ![images/Screenshot2025-03-18142459.png](/images/Screenshot2025-03-18142459.png)
 
 ## Troubleshooting
 
 If you need to **reindex**, **pause**, **update the credentials**, **configuration**, or update the **frequencies** of the connector, click on the existing connector and see the following options
-
 
 Revisit the **How it Works** at the top of this page to understand OnyxConnector's authorizations
 
